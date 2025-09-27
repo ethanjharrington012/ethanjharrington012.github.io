@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Story — Simplomation</title>
+  <meta name="description" content="Ethan Harrington’s story and the heart behind Simplomation." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <!-- Open Graph (nice when sharing the URL) -->
+  <meta property="og:title" content="My Story — Simplomation" />
+  <meta property="og:description" content="Why I started Simplomation: helping Maine trades save time with quiet, practical automation." />
+  <meta property="og:image" content="assets/headshot.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind brand config (same colors as your home page) -->
+  <script>
+    window.tailwind = {
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 500:'#06B6D4', 600:'#0891B2', 700:'#0E7490' },
+              accent:{ 400:'#34D399', 500:'#10B981' },
+            },
+            fontFamily: { sans: ['Inter','system-ui','Avenir','Segoe UI','Helvetica Neue','Arial','Noto Sans','sans-serif'] }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Header -->
+  <header class="border-b border-white/10 sticky top-0 bg-slate-950/70 backdrop-blur z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a class="flex items-center gap-3" href="index.html">
+        <img src="assets/logo.svg" alt="Simplomation logo" class="h-8 w-8" />
+        <span class="text-xl font-semibold tracking-tight">Simplomation</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html#features" class="text-slate-300 hover:text-white">Features</a>
+        <a href="about.html" class="text-white underline underline-offset-4 decoration-brand-500">My story</a>
+        <a href="index.html#contact" class="text-slate-300 hover:text-white">Contact</a>
+      </nav>
+      <a href="index.html#signup" class="inline-flex items-center rounded-lg bg-accent-500 px-4 py-2 text-sm font-medium text-white shadow hover:bg-accent-400 transition">Get updates</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent-500/20 via-brand-500/20 to-indigo-600/20"></div>
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+      <h1 class="text-4xl md:text-5xl font-semibold">My story</h1>
+      <p class="mt-4 text-slate-300 max-w-2xl">
+        I started Simplomation to help small Maine trades spend less time chasing paperwork and more time doing the work they love.
+        Quiet, practical automation — built on the tools you already use.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <!-- Headshot -->
+      <div class="md:col-span-1">
+        <div class="rounded-2xl ring-1 ring-white/10 overflow-hidden bg-white/5">
+          <img src="assets/headshot.jpg" alt="Ethan Harrington headshot" class="w-full h-auto object-cover">
+        </div>
+        <div class="mt-4 text-sm text-slate-400">Photo: Ethan Harrington</div>
+      </div>
+
+      <!-- Story text -->
+      <div class="md:col-span-2">
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 space-y-4 leading-relaxed">
+          <p>
+            I grew up building things — bands, side projects, little businesses. When I began helping
+            friends who run trades companies, the pattern was obvious: quotes and follow-ups took too long,
+            and great jobs slipped through the cracks.
+          </p>
+          <p>
+            My approach is simple: connect your existing tools (Google Calendar, Gmail, QuickBooks,
+            your website) so routine steps happen automatically. No new software to learn.
+          </p>
+          <p>
+            Today, Simplomation helps arborists, landscapers, and contractors across Maine move faster:
+            instant estimates, hands-free follow-ups, same-day invoicing with photos — the unglamorous
+            stuff that keeps revenue steady.
+          </p>
+          <p class="text-slate-300">
+            If that sounds helpful, I’d love to hear about your workflow.
+          </p>
+          <a href="mailto:hello@simplomation.com"
+             class="inline-flex items-center rounded-lg bg-brand-500 hover:bg-brand-600 px-4 py-2 text-sm font-medium text-white">
+            Email me
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.svg" alt="" class="h-6 w-6" />
+        <span class="text-sm text-slate-300">&copy; <span id="year"></span> Simplomation. All rights reserved.</span>
+      </div>
+      <div class="text-sm text-slate-300">
+        Questions? <a class="underline decoration-dotted underline-offset-2 hover:text-white" href="mailto:hello@simplomation.com">hello@simplomation.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
